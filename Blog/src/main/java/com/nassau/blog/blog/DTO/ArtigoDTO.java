@@ -8,6 +8,15 @@ public class ArtigoDTO {
     private String autor;
     private String data;
     private String texto;
+    public String getIdade() {
+        return idade;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
+
+    private String idade;
 
     public String getTitulo() {
         return titulo;

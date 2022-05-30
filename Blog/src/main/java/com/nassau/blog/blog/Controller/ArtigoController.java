@@ -41,6 +41,7 @@ public class ArtigoController {
         artigo.setAutor(artigoDTO.getAutor());
         artigo.setTexto(artigoDTO.getTexto());
         artigo.setData( ArtigoHelper.converterStringParamDate(artigoDTO.getData()));
+        artigo.setIdade( Integer.parseInt(artigoDTO.getIdade()) );
         
         return artigoLocalService.criarArtigo(artigo);
     }
