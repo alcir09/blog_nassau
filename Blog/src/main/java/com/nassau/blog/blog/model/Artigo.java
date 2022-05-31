@@ -1,4 +1,5 @@
 package com.nassau.blog.blog.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,12 +11,22 @@ import java.util.Date;
 public class Artigo {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO ) 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private String titulo;
     private String autor;
     private Date data;
+    private int idade;
+
+    public int getIdade() {
+        return idade;
+    }
+    
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
 
     @Column(columnDefinition = "TEXT")
     private String texto;
@@ -59,5 +70,5 @@ public class Artigo {
     public void setTexto(String texto) {
         this.texto = texto;
     }
-    
+
 }
